@@ -1,0 +1,28 @@
+COMMENTBLOCK
+Binary Search Algorithm Implemented in PseudoLang
+By: Vaedz7 (GitHub)
+COMMENTBLOCK
+
+PROCEDURE binarySearch(arr, x) {
+  low <- 0
+  high <- LENGTH(arr)-1
+  mid <- 1
+
+  REPEAT UNTIL(low > high) {
+    mid <- ((high + low) / 2) + 1
+
+    IF(arr[mid] < x) {
+      low <- mid + 1
+    }
+    ELSE {
+      IF(arr[mid] > x) {
+        high <- mid - 1
+      }
+      ELSE {
+        RETURN(mid)
+      }
+    }
+  }
+
+  RETURN(-1)
+}
